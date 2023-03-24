@@ -13,7 +13,7 @@ const corsOptions = {
 // const requestURL = "YOUR_URL";
 const requestURL = "https://api.frontendexpert.io/api/fe/wordle-words";
 
-app.get("/api", cors(corsOptions), (req, res) => {
+app.get("/", cors(corsOptions), (req, res) => {
   fetch(requestURL, { method: "GET" })
     .then((response) => response.json())
     .then((data) => res.json(data));
